@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function App() {
   const [user, setUser] = useState("");
@@ -30,9 +31,11 @@ function App() {
       .then((data) => {
         if (data.data === true) {
           navigate('/home');
+          toast.success("Login successful!");
           console.log("Login Successfully");
         } else {
           navigate('/fail');
+          toast.error("Login failed!");
           console.log("Login Failed");
         }
       })

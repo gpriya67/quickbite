@@ -10,6 +10,7 @@ html {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -20,6 +21,7 @@ html {
     opacity: 0;
     transform: scale(0.95) translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -32,4 +34,13 @@ html {
 
 .animate-scaleUp {
   animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body {
+  background-color: #fff8f0;
+  background-image:
+    radial-gradient(600px circle at 6% 10%, rgba(255, 153, 51, 0.22), transparent 60%),
+    radial-gradient(520px circle at 94% 36%, rgba(255, 200, 120, 0.30), transparent 60%),
+    radial-gradient(700px circle at 18% 98%, rgba(255, 120, 60, 0.16), transparent 60%);
+  background-attachment: fixed;
 }
